@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Genre : Decodable {
-    let genre : String
+struct Genre: Decodable {
+    let genre: String
+    let image: String
 }

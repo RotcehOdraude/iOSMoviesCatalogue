@@ -30,14 +30,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(genreDataManager.genreCount())
         return genreDataManager.genreCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "genreCell", for: indexPath) as! GenreCellCollectionViewCell
         let genre = genreDataManager.genreAt(index: indexPath.row)
-        //cell.genreImageView.image = UIImage.init(named: genre.image)
+        cell.genreImageView.image = UIImage(named: genre.image)
         cell.genreLabel.text = genre.genre
         return cell
     }

@@ -7,6 +7,28 @@
 
 import Foundation
 
+enum MovieGenre: String {
+    case Adventure
+    case Comedy
+    case Fantasy
+    case Crime
+    case Drama
+    case Romance
+    case SciFi = "Sci-Fi"
+    case Thriller
+    case Horror
+    case Western
+    
+    var image: String {
+        switch self {
+        case .Adventure, .Comedy, .Drama, .Horror, .Thriller, .Western, .SciFi:
+            return self.rawValue.lowercased()
+        case .Fantasy, .Crime, .Romance:
+            return self.rawValue.lowercased() + "1"
+        }
+    }
+}
+
 class GenreDataManager {
     private var genres : [Genre] = []
     
@@ -16,7 +38,8 @@ class GenreDataManager {
                 let data = try Data(contentsOf: file)
                 let decodeGenres = try JSONDecoder().decode([String].self, from: data)
                 for genre in decodeGenres{
-                    genres.append(Genre(genre: genre))
+                    let image = MovieGenre(rawValue: genre) ?? .Adventure
+                    genres.append(Genre(genre: genre, image: image.image))
                 }
             } catch{
                 print("error: ", error)
