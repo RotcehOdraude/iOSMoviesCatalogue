@@ -91,11 +91,6 @@
 				C4B1569D28C3CAE100C87748 /* Controller */,
 				9BF94DC328C2ABA200F6D640 /* AppDelegate.swift */,
 				9BF94DC528C2ABA200F6D640 /* SceneDelegate.swift */,
-				9BF94DC728C2ABA200F6D640 /* ViewController.swift */,
-				9BF94DD928C2AE7900F6D640 /* DetailViewController.swift */,
-				9BF94DDB28C2B01100F6D640 /* ViewMoreViewController.swift */,
-				9BF94DDD28C2BBA100F6D640 /* FavoritosViewController.swift */,
-				9BF94DDF28C2BBB600F6D640 /* AyudaViewController.swift */,
 				9BF94DC928C2ABA200F6D640 /* Main.storyboard */,
 				9BF94DCE28C2ABA300F6D640 /* LaunchScreen.storyboard */,
 				9BF94DD128C2ABA300F6D640 /* Info.plist */,
@@ -136,6 +131,11 @@
 		C4B1569D28C3CAE100C87748 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9BF94DC728C2ABA200F6D640 /* ViewController.swift */,
+				9BF94DD928C2AE7900F6D640 /* DetailViewController.swift */,
+				9BF94DDB28C2B01100F6D640 /* ViewMoreViewController.swift */,
+				9BF94DDD28C2BBA100F6D640 /* FavoritosViewController.swift */,
+				9BF94DDF28C2BBB600F6D640 /* AyudaViewController.swift */,
 				9BF94DD728C2AE6400F6D640 /* HomeViewController.swift */,
 			);
 			path = Controller;
